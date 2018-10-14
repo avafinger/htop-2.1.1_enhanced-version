@@ -13,9 +13,9 @@ Deb package for Bionic (Ubuntu 18.04) arm64. It may work on Debian, but i have n
 * **Install htop-2.1.1 deb package**
 
 
-  		git clone https://github.com/avafinger/htop-2.1.1_enhanced-version
-        	cd htop-2.1.1_enhanced-version/htop
-        	sudo dpkg -i htop_2.1.1-3_arm64.deb
+		git clone https://github.com/avafinger/htop-2.1.1_enhanced-version
+		cd htop-2.1.1_enhanced-version/htop
+		sudo dpkg -i htop_2.1.1-3_arm64.deb
 
 
 
