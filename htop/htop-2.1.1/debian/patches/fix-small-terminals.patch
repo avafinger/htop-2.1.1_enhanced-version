@@ -1,0 +1,18 @@
+Description: Fix issue with small terminals
+Bug: https://github.com/hishamhm/htop/issues/733
+Bug-Debian: https://bugs.debian.org/889693
+Origin: upstream,https://github.com/hishamhm/htop/commit/b544c22c72613d561180738d8c31c97712b3c0ef
+Author: Hisham Muhammad <hisham@gobolinux.org>
+Last-Update: 2018-02-13
+
+--- a/Meter.c
++++ b/Meter.c
+@@ -287,7 +287,7 @@
+    
+    int blockSizes[10];
+ 
+-   xSnprintf(bar, w + 1, "%*s", w, buffer);
++   xSnprintf(bar, w + 1, "%*.*s", w, w, buffer);
+ 
+    // First draw in the bar[] buffer...
+    int offset = 0;

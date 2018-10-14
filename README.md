@@ -5,7 +5,7 @@ Monitor the health of your RK3399 board Real-Time and watch CPU Temp, CPU VCore 
 
 Screenshot of NanoPi M4 (arm64)
 
-[![NanoPi M4 7z benchmark](https://github.com/avafinger/htop-2.1.1_enhanced-version/raw/master/img/nanopi-m4.gif)
+![NanoPi M4 7z benchmark](https://github.com/avafinger/htop-2.1.1_enhanced-version/raw/master/img/nanopi-m4.gif)
 
 # Installing Deb Package
 Deb package for Bionic (Ubuntu 18.04) arm64. It may work on Debian, but i have not tested it

@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Sun, 23 Aug 2018 12:38:25 -0300
+Source: htop
+Binary: htop
+Architecture: arm64
+Version: 2.1.1-3
+Distribution: unstable
+Urgency: medium
+Maintainer: Daniel Lange <DLange@debian.org>
+Changed-By: Alexander Finger <alex.mobigo@gmail.com>
+Description:
+ htop       - interactive processes viewer
+Changes:
+ htop (2.1.1-3) unstable; urgency=medium
+ .
+   * Add cpufreq cpucore and thermal monitoring for H6 mainline kernel
+     (experimental only)
+Checksums-Sha1:
+ 319ffb16e037bcda701af2d017e099a9c410326d 272772 htop-dbgsym_2.1.1-3_arm64.ddeb
+ c60515245a711f47ea2b860b857291b2aa6cfbb7 5378 htop_2.1.1-3_arm64.buildinfo
+ 36c939cede72220b0c6c33b01b84d03eba3f51ae 75308 htop_2.1.1-3_arm64.deb
+Checksums-Sha256:
+ 61b7d70f46c9cbab5ef890b113214c9b6e3e2945dac1261ad21cb6218da599b0 272772 htop-dbgsym_2.1.1-3_arm64.ddeb
+ f4daa57c5cbe680dcf80710f00cf4a74dbbf9497a1f45417f233adcb24b70edb 5378 htop_2.1.1-3_arm64.buildinfo
+ d38623cbc365719ce75f1bbaed40759978e6c1e59372284bb2bf57dbddee9061 75308 htop_2.1.1-3_arm64.deb
+Files:
+ e456bf63e0f7b9df1d97321ccdf9a76b 272772 debug optional htop-dbgsym_2.1.1-3_arm64.ddeb
+ eb61f61d20dbd55f9f92483a840f6ece 5378 utils optional htop_2.1.1-3_arm64.buildinfo
+ 4dac221c8189d03ba79c6f78a7dfe4f4 75308 utils optional htop_2.1.1-3_arm64.deb

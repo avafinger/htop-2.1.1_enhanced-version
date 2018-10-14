@@ -1,0 +1,17 @@
+Description: Fix preservation of LDFLAGS value during configure script
+Bug: https://github.com/hishamhm/htop/issues/738
+Origin: upstream,https://github.com/hishamhm/htop/commit/df9922a67eb8e02ab4cf1ff8f24b40f14094e699
+Author: Hisham Muhammad <hisham@gobolinux.org>
+Last-Update: 2018-02-17
+
+--- a/configure.ac
++++ b/configure.ac
+@@ -167,7 +167,7 @@
+          LIBS="$htop_config_script $LIBS "
+          htop_script_success=yes
+       ], [])
+-      LDFLAGS="$save_LDFLAGS"
++      LDFLAGS="$htop_save_LDFLAGS"
+    fi
+    if test "x$htop_script_success" = xno; then
+       [$5]
