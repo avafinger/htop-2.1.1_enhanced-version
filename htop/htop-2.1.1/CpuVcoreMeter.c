@@ -18,7 +18,43 @@ int CpuVcoreMeter_attributes[] = {
 
 static void CpuVcoreMeter_setValues(Meter* this, char* buffer, int len) {
    int v1,v2;
-   int Vcore = Platform_getCpuVcore();
+   int Vcore, Vcore_l, Vcore_b;
+   char buf1[80], buf2[80];
+   int h;
+   
+   if (Platform_getCpuBigLITTLE()) {
+       h = len / 2;
+       if (h > 79)
+           h = 79;
+       Vcore_b = Platform_getCpuVcore_b();
+       if (Vcore_b > 1000) {
+           Vcore_b /= 1000;
+       }
+       if (Vcore_b >= 1000) {
+           Vcore_b /= 10;
+           v1 = Vcore_b / 100;
+           v2 = Vcore_b % 100;
+           xSnprintf(buf1, h, "%d.%02d V", v1, v2);
+       } else {
+           xSnprintf(buf1, h, "%4d mV", Vcore_b);
+       }
+       Vcore_l = Platform_getCpuVcore_l();
+       if (Vcore_l > 1000) {
+           Vcore_l /= 1000;
+       }
+       if (Vcore_l >= 1000) {
+           Vcore_l /= 10;
+           v1 = Vcore_l / 100;
+           v2 = Vcore_l % 100;
+           xSnprintf(buf2, h, "%d.%02d V ", v1, v2);
+       } else {
+           xSnprintf(buf2, h, "%4d mV", Vcore_l);
+       }
+       xSnprintf(buffer, len, "%s,%s (big.LITTLE)", buf1, buf2);
+       return;
+   }
+   
+   Vcore = Platform_getCpuVcore();
    if (Vcore > 1000) {
        Vcore /= 1000;
    }
@@ -26,9 +62,9 @@ static void CpuVcoreMeter_setValues(Meter* this, char* buffer, int len) {
        Vcore /= 10;
        v1 = Vcore / 100;
        v2 = Vcore % 100;
-       snprintf(buffer, len, "%d.%02d V", v1, v2);
+       xSnprintf(buffer, len, "%d.%02d V", v1, v2);
    } else {
-       snprintf(buffer, len, "%4d mV", Vcore);
+       xSnprintf(buffer, len, "%4d mV", Vcore);
    }
 }
 

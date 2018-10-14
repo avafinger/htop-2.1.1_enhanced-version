@@ -53,6 +53,7 @@ in the source distribution for its full text.
 #else
 #include <unistd.h> 
 #endif
+#include <string.h> 
 }*/
 
 #ifndef CLAMP
@@ -217,6 +218,35 @@ int Platform_getCpuVcore() {
    }
    return Vcore;
 }
+
+int Platform_getCpuVcore_l() {
+   int Vcore = 0;
+   FILE* fd;
+   // sleep_ms(10);
+   fd = fopen("/sys/devices/platform/ff3c0000.i2c/i2c-0/0-001b/regulator/regulator.12/microvolts", "r");
+   if (fd) {
+      int n;
+      n = fscanf(fd, "%d", &Vcore);
+      fclose(fd);
+      if (n <= 0) return 0;
+   }
+   return Vcore;
+}
+
+int Platform_getCpuVcore_b() {
+   int Vcore = 0;
+   FILE* fd;
+   // sleep_ms(10);
+   fd = fopen("/sys/devices/platform/ff3c0000.i2c/i2c-0/0-0040/regulator/regulator.9/microvolts", "r");
+   if (fd) {
+      int n;
+      n = fscanf(fd, "%d", &Vcore);
+      fclose(fd);
+      if (n <= 0) return 0;
+   }
+   return Vcore;
+}
+
 
 int Platform_getCpuBigLITTLE() {
     return Platform_cpuBigLITTLE;
