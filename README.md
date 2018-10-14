@@ -1,7 +1,7 @@
 # htop-2.1.1_enhanced-version
-An enhanced version of htop 2.1.0 to monitor the health of big.LITTLE arm core.
+An enhanced version of htop 2.1.0 to monitor the system health of your big.LITTLE arm64 core.
 
-Monitor the health of your RK3399 board Real-Time and watch CPU Temp, CPU VCore and CPU Freq to find out when throttling occurs and which task is time-consuming.
+Monitor the health of your RK3399 board Real-Time and watch CPU Temp, CPU VCore and CPU Freq (big.LITTLE) to find out when throttling occurs and which task is time-consuming.
 
 Screenshot of NanoPi M4 (arm64)
 
@@ -13,7 +13,7 @@ Deb package for Bionic (Ubuntu 18.04) arm64. It may work on Debian, but i have n
 * **Install htop-2.1.1 deb package**
 
 
-        git clone https://github.com/avafinger/htop-2.1.1_enhanced-version
+  	git clone https://github.com/avafinger/htop-2.1.1_enhanced-version
         cd htop-2.1.1_enhanced-version/htop
         sudo dpkg -i htop_2.1.1-3_arm64.deb
 
@@ -27,11 +27,12 @@ You can modify, fix or enhance the source code to run on any arm/arm64 single bo
 * **Build the package**
 
 
-        cd htop-2.1.1_enhanced-version/htop/htop-2.1.1/
+	cd htop-2.1.1_enhanced-version/htop/htop-2.1.1/
         sudo dpkg-buildpackage -b -uc -us
 
 
 * **Deb packages**
+
 
 	ll ../
 	-rw-r--r--  1 root   root   267K Oct 13 20:56 htop-dbgsym_2.1.1-3_arm64.ddeb
@@ -41,6 +42,7 @@ You can modify, fix or enhance the source code to run on any arm/arm64 single bo
 
 
 * **Install**
+
 
 	cd ..
         sudo dpkg -i htop_2.1.1-3_arm64.deb
@@ -60,7 +62,10 @@ You must run htop with root privileges to have access to vital information of th
 
 * Run: **sudo htop**
 
-* To Display CPU Freq, CPU Temp. and CPU VCore you have to enter Configuration setup **F2**
+![Htop setup](https://github.com/avafinger/htop-2.1.1_enhanced-version/raw/master/img/vcore.gif)
+
+
+* To Display CPU Freq, CPU Temp. and CPU VCore (big.LITTLE) you have to enter Configuration setup **F2**
 and add the desired info.
 
 ![Htop setup](https://github.com/avafinger/htop-2.1.1_enhanced-version/raw/master/img/htop_setup.gif)
