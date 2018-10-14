@@ -27,8 +27,8 @@ You can modify, fix or enhance the source code to run on any arm/arm64 single bo
 * **Build the package**
 
 
-	cd htop-2.1.1_enhanced-version/htop/htop-2.1.1/
-	sudo dpkg-buildpackage -b -uc -us
+		cd htop-2.1.1_enhanced-version/htop/htop-2.1.1/
+		sudo dpkg-buildpackage -b -uc -us
 
 
 * **Deb packages**
@@ -44,8 +44,8 @@ You can modify, fix or enhance the source code to run on any arm/arm64 single bo
 * **Install**
 
 
-	cd ..
-	sudo dpkg -i htop_2.1.1-3_arm64.deb
+		cd ..
+		sudo dpkg -i htop_2.1.1-3_arm64.deb
 
 
 
