@@ -29,11 +29,26 @@ You can modify, fix or enhance the source code to run on any arm/arm64 single bo
 
         cd htop-2.1.1_enhanced-version/htop/htop-2.1.1/
         sudo dpkg-buildpackage -b -uc -us
-        cd ..
+
+
+* **Deb packages**
+
+	ll ../
+	-rw-r--r--  1 root   root   267K Oct 13 20:56 htop-dbgsym_2.1.1-3_arm64.ddeb
+	-rw-r--r--  1 root   root   5.3K Oct 13 20:56 htop_2.1.1-3_arm64.buildinfo
+	-rw-r--r--  1 ubuntu ubuntu 1.3K Oct 13 20:56 htop_2.1.1-3_arm64.changes
+	-rw-r--r--  1 ubuntu ubuntu  74K Oct 13 20:56 htop_2.1.1-3_arm64.deb
+
+
+* **Install**
+
+	cd ..
         sudo dpkg -i htop_2.1.1-3_arm64.deb
 
 
+
 Before you build the package, make sure you install all depencies:
+
 
         sudo apt-get install dbhelper libncurses5-dev libncursesw5-dev python-minimal:native
 
@@ -48,4 +63,5 @@ You must run htop with root privileges to have access to vital information of th
 * To Display CPU Freq, CPU Temp. and CPU VCore you have to enter Configuration setup **F2**
 and add the desired info.
 
+![Htop setup](https://github.com/avafinger/htop-2.1.1_enhanced-version/raw/master/img/htop_setup.gif)
 
