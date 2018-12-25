@@ -34,7 +34,7 @@ static void CpuVcoreMeter_setValues(Meter* this, char* buffer, int len) {
            Vcore_b /= 10;
            v1 = Vcore_b / 100;
            v2 = Vcore_b % 100;
-           xSnprintf(buf1, h, "%d.%02d V", v1, v2);
+           xSnprintf(buf1, h, "%d.%02d V ", v1, v2);
        } else {
            xSnprintf(buf1, h, "%4d mV", Vcore_b);
        }
@@ -50,7 +50,7 @@ static void CpuVcoreMeter_setValues(Meter* this, char* buffer, int len) {
        } else {
            xSnprintf(buf2, h, "%4d mV", Vcore_l);
        }
-       xSnprintf(buffer, len, "%s,%s (big.LITTLE)", buf1, buf2);
+       xSnprintf(buffer, len, "%s %s (big.LITTLE)", buf1, buf2);
        return;
    }
    

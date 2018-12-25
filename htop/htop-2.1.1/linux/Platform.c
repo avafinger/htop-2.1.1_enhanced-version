@@ -168,12 +168,15 @@ void sleep_ms(int milliseconds) {
 }
 
 
-int Platform_getCpuTemp() {
+int Platform_getCpuTemp(int cluster) {
    int Temp = 0;
-
-   FILE* fd = fopen("/sys/class/thermal/thermal_zone0/temp", "r");
+   FILE* fd;
+   char szbuf[256];
+   xSnprintf(szbuf, sizeof(szbuf), "/sys/class/thermal/thermal_zone%d/temp", cluster);
+   fd = fopen(szbuf, "r");
    if (!fd) {
-       fd = fopen("/sys/devices/virtual/thermal/thermal_zone0/temp", "r");
+       xSnprintf(szbuf, sizeof(szbuf), "/sys/devices/virtual/thermal/thermal_zone%d/temp", cluster);
+       fd = fopen(szbuf, "r");
    }
    if (fd) {
       int n = fscanf(fd, "%d", &Temp);

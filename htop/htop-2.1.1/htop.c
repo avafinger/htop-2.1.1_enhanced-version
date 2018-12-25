@@ -201,7 +201,7 @@ int main(int argc, char** argv) {
       settings->colorScheme = COLORSCHEME_MONOCHROME;
 
    CRT_init(settings->delay, settings->colorScheme);
-   
+
    MainPanel* panel = MainPanel_new();
    ProcessList_setPanel(pl, (Panel*) panel);
 
@@ -222,7 +222,7 @@ int main(int argc, char** argv) {
       .header = header,
    };
    MainPanel_setState(panel, &state);
-   
+
    ScreenManager* scr = ScreenManager_new(0, header->height, 0, -1, HORIZONTAL, header, settings, true);
    ScreenManager_add(scr, (Panel*) panel, -1);
 

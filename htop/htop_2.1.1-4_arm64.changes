@@ -1,0 +1,29 @@
+Format: 1.8
+Date: Sun, 25 Dec 2018 17:35:25 -0300
+Source: htop
+Binary: htop
+Architecture: arm64
+Version: 2.1.1-4
+Distribution: unstable
+Urgency: medium
+Maintainer: Daniel Lange <DLange@debian.org>
+Changed-By: Alexander Finger <alex.mobigo@gmail.com>
+Description:
+ htop       - interactive processes viewer
+Changes:
+ htop (2.1.1-4) unstable; urgency=medium
+ .
+   * Add cluster cpufreq cpucore and thermal monitoring for RK3399
+     big.LITTLE (BSP) mainline kernel (experimental only)
+Checksums-Sha1:
+ 1f9f6952eedd820094997d847a45229cc023804d 304748 htop-dbgsym_2.1.1-4_arm64.ddeb
+ d94576d208374447076f97ba777570c5c74a5c83 5963 htop_2.1.1-4_arm64.buildinfo
+ 0b2e568bf8009848b35d78fe4c079852e951d301 82504 htop_2.1.1-4_arm64.deb
+Checksums-Sha256:
+ 7a825a9239ffbdc0ab660cc3fc134d5cdb2c72ffeef962c4dd9d916706567d21 304748 htop-dbgsym_2.1.1-4_arm64.ddeb
+ d877b99e86bd23cb7abf2441a1d3bc06a6ce4bbe5f22e96d7a7e5efda058c3a3 5963 htop_2.1.1-4_arm64.buildinfo
+ 7a37b1781bf4a5e87d169ea3d4847ac4545bd5e7d647232b7dce5c9c591a7fcc 82504 htop_2.1.1-4_arm64.deb
+Files:
+ dd4b4c9f371837cd5fd57ee5c5e9230a 304748 debug optional htop-dbgsym_2.1.1-4_arm64.ddeb
+ ba904c294e8e8dbf85f6900189e5a62f 5963 utils optional htop_2.1.1-4_arm64.buildinfo
+ 6ad782161defe0126bfd903cb6e4d9dd 82504 utils optional htop_2.1.1-4_arm64.deb

@@ -150,11 +150,6 @@ static void AllCPUsMeter_init(Meter* this) {
          meters[i] = Meter_new(this->pl, start+i+1, (MeterClass*) Class(CPUMeter));
       Meter_init(meters[i]);
    }
-   Meter* meter = NULL;
-   for (int i = 0; i < count; i++) {
-      meter = Meter_new(this->pl, i+1, (MeterClass*) Class(CpuFreqMeter));
-      Meter_init(meter);
-   }
    if (this->mode == 0)
       this->mode = BAR_METERMODE;
    int h = Meter_modes[this->mode]->h;

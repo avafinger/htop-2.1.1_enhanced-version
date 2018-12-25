@@ -123,17 +123,8 @@ AvailableMetersPanel* AvailableMetersPanel_new(Settings* settings, Header* heade
       const char* label = type->description ? type->description : type->uiName;
       Panel_add(super, (Object*) ListItem_new(label, i << 16));
    }
-   MeterClass* type = &CpuFreqMeter_class;
+   MeterClass* type = &CPUMeter_class;
    int cpus = pl->cpuCount;
-   if (cpus > 1) {
-      for ( int z = 1; z <= cpus; z++) {
-         char buffer[50];
-         xSnprintf(buffer, 50, "%s %d", type->uiName, z);
-         Panel_add(super, (Object*) ListItem_new(buffer, z | (18 << 16)));
-      }
-   }
-   // Handle (&CPUMeter_class)
-   type = &CPUMeter_class;
    if (cpus > 1) {
       Panel_add(super, (Object*) ListItem_new("CPU average", 0));
       for (i = 1; i <= cpus; i++) {
