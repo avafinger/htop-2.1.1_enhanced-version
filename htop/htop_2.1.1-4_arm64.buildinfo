@@ -4,17 +4,17 @@ Binary: htop
 Architecture: arm64
 Version: 2.1.1-4
 Checksums-Md5:
- dd4b4c9f371837cd5fd57ee5c5e9230a 304748 htop-dbgsym_2.1.1-4_arm64.ddeb
- 6ad782161defe0126bfd903cb6e4d9dd 82504 htop_2.1.1-4_arm64.deb
+ 8b1d5cafc407e6570e536444a45ea6c7 304516 htop-dbgsym_2.1.1-4_arm64.ddeb
+ 52d569f9be4fc77cf69bd72c61ca4944 82296 htop_2.1.1-4_arm64.deb
 Checksums-Sha1:
- 1f9f6952eedd820094997d847a45229cc023804d 304748 htop-dbgsym_2.1.1-4_arm64.ddeb
- 0b2e568bf8009848b35d78fe4c079852e951d301 82504 htop_2.1.1-4_arm64.deb
+ 0902284684df6fbdf708438073c5c4f35ec38ae8 304516 htop-dbgsym_2.1.1-4_arm64.ddeb
+ 6c9191e54b22bdbbea09a0d9a61fafc351b7a9c8 82296 htop_2.1.1-4_arm64.deb
 Checksums-Sha256:
- 7a825a9239ffbdc0ab660cc3fc134d5cdb2c72ffeef962c4dd9d916706567d21 304748 htop-dbgsym_2.1.1-4_arm64.ddeb
- 7a37b1781bf4a5e87d169ea3d4847ac4545bd5e7d647232b7dce5c9c591a7fcc 82504 htop_2.1.1-4_arm64.deb
+ e0e07c744c5f3f16cb3c17f7e579bcae523f9e2f59a56932bef9afe4d60d52ea 304516 htop-dbgsym_2.1.1-4_arm64.ddeb
+ 7a877318d38840f004184c4aa379550b9e04987e93ea9126096e214e80462fa2 82296 htop_2.1.1-4_arm64.deb
 Build-Origin: Ubuntu
 Build-Architecture: arm64
-Build-Date: Tue, 25 Dec 2018 19:21:12 -0200
+Build-Date: Wed, 26 Dec 2018 11:28:55 -0200
 Installed-Build-Depends:
  autoconf (= 2.69-11),
  automake (= 1:1.15.1-3ubuntu2),
