@@ -16,6 +16,7 @@ in the source distribution for its full text.
 #include "CPUMeter.h"
 #include "CpuFreqMeter.h"
 #include "CpuTempMeter.h"
+#include "GpuTempMeter.h"
 #include "CpuVcoreMeter.h"
 #include "MemoryMeter.h"
 #include "SwapMeter.h"
@@ -150,6 +151,7 @@ MeterClass* Platform_meterTypes[] = {
    &CpuFreqMeter_class,
    /* --- fix me --- &AllCpuFreqMeter_class, */
    &CpuVcoreMeter_class,
+   &GpuTempMeter_class,
    NULL
 };
 
@@ -167,16 +169,28 @@ void sleep_ms(int milliseconds) {
 #endif
 }
 
-
-int Platform_getCpuTemp(int cluster) {
+int Platform_getGpuTemp() {
    int Temp = 0;
-   FILE* fd;
-   char szbuf[256];
-   xSnprintf(szbuf, sizeof(szbuf), "/sys/class/thermal/thermal_zone%d/temp", cluster);
-   fd = fopen(szbuf, "r");
+
+   FILE* fd = fopen("/sys/class/thermal/thermal_zone1/temp", "r");
    if (!fd) {
-       xSnprintf(szbuf, sizeof(szbuf), "/sys/devices/virtual/thermal/thermal_zone%d/temp", cluster);
-       fd = fopen(szbuf, "r");
+       fd = fopen("/sys/devices/virtual/thermal/thermal_zone1/temp", "r");
+   }
+   if (fd) {
+      int n = fscanf(fd, "%d", &Temp);
+      fclose(fd);
+      if (n <= 0) return 0;
+   }
+   return Temp;
+}
+
+
+int Platform_getCpuTemp() {
+   int Temp = 0;
+
+   FILE* fd = fopen("/sys/class/thermal/thermal_zone0/temp", "r");
+   if (!fd) {
+       fd = fopen("/sys/devices/virtual/thermal/thermal_zone0/temp", "r");
    }
    if (fd) {
       int n = fscanf(fd, "%d", &Temp);
