@@ -16,7 +16,7 @@ int GpuTempMeter_attributes[] = {
 };
 
 static void GpuTempMeter_setValues(Meter* this, char* buffer, int len) {
-   int Temp = Platform_getGpuTemp(pol);
+   int Temp = Platform_getGpuTemp();
    if (Temp > 1000) {
        Temp /= 1000;
    }
