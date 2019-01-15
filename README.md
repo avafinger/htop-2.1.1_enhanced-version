@@ -15,7 +15,7 @@ Deb package for Bionic (Ubuntu 18.04) arm64. It may work on Debian, but i have n
 
 		git clone https://github.com/avafinger/htop-2.1.1_enhanced-version
 		cd htop-2.1.1_enhanced-version/htop
-		sudo dpkg -i htop_2.1.1-3_arm64.deb
+		sudo dpkg -i htop_2.1.1-4_arm64.deb
 
 
 
@@ -35,17 +35,17 @@ You can modify, fix or enhance the source code to run on any arm/arm64 single bo
 
 
 		ll ../
-		-rw-r--r--  1 root   root   267K Oct 13 20:56 htop-dbgsym_2.1.1-3_arm64.ddeb
-		-rw-r--r--  1 root   root   5.3K Oct 13 20:56 htop_2.1.1-3_arm64.buildinfo
-		-rw-r--r--  1 ubuntu ubuntu 1.3K Oct 13 20:56 htop_2.1.1-3_arm64.changes
-		-rw-r--r--  1 ubuntu ubuntu  74K Oct 13 20:56 htop_2.1.1-3_arm64.deb
+		-rw-r--r--  1 root   root   267K Oct 13 20:56 htop-dbgsym_2.1.1-4_arm64.ddeb
+		-rw-r--r--  1 root   root   5.3K Oct 13 20:56 htop_2.1.1-4_arm64.buildinfo
+		-rw-r--r--  1 ubuntu ubuntu 1.3K Oct 13 20:56 htop_2.1.1-4_arm64.changes
+		-rw-r--r--  1 ubuntu ubuntu  74K Oct 13 20:56 htop_2.1.1-4_arm64.deb
 
 
 * **Install**
 
 
 		cd ..
-		sudo dpkg -i htop_2.1.1-3_arm64.deb
+		sudo dpkg -i htop_2.1.1-4_arm64.deb
 
 
 
