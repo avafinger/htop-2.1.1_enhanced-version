@@ -1,3 +1,10 @@
+htop (2.1.1-5) unstable; urgency=medium
+
+  * Add cpufreq cpucore and thermal monitoring for RK3399
+    big.LITTLE (linux-next) kernel 5.0.0-rc (experimental only)
+
+ -- Alexander Finger <alex.mobigo@gmail.com>  Tue, 15 Jan 2019 19:48:25 -0300
+
 htop (2.1.1-4) unstable; urgency=medium
 
   * Add cluster cpufreq cpucore and thermal monitoring for RK3399

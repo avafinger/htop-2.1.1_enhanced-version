@@ -240,7 +240,7 @@ int Platform_getCpuVcore_l() {
    int Vcore = 0;
    FILE* fd;
    // sleep_ms(10);
-   fd = fopen("/sys/devices/platform/ff3c0000.i2c/i2c-0/0-001b/regulator/regulator.12/microvolts", "r");
+   fd = fopen("/sys/devices/platform/ff3c0000.i2c/i2c-0/0-001b/regulator/regulator.13/microvolts", "r");
    if (fd) {
       int n;
       n = fscanf(fd, "%d", &Vcore);
@@ -254,7 +254,7 @@ int Platform_getCpuVcore_b() {
    int Vcore = 0;
    FILE* fd;
    // sleep_ms(10);
-   fd = fopen("/sys/devices/platform/ff3c0000.i2c/i2c-0/0-0040/regulator/regulator.9/microvolts", "r");
+   fd = fopen("/sys/devices/platform/ff3c0000.i2c/i2c-0/0-0040/regulator/regulator.10/microvolts", "r");
    if (fd) {
       int n;
       n = fscanf(fd, "%d", &Vcore);
